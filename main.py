@@ -28,8 +28,10 @@ class Asteroid(pygame.sprite.Sprite):
         
         if self.rect[0] < 0 or self.rect[0] > width - self.rect.width:
             self.speed[0] = -self.speed[0]
+            pygame.mixer.Sound.play(collision_sound)
         if self.rect[1] < 0 or self.rect[1] > height - self.rect.height:
             self.speed[1] = -self.speed[1]
+            pygame.mixer.Sound.play(collision_sound)
 
         self.rect = self.rect.move(self.speed)
 
@@ -82,6 +84,8 @@ class Ship(pygame.sprite.Sprite):
 
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("ASTEROIDS")
+
+collision_sound = pygame.mixer.Sound("collision.wav")
 
 asteroids = pygame.sprite.Group(Asteroid(3),Asteroid(3),Asteroid(3))
 ship = Ship()
