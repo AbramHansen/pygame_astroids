@@ -1,8 +1,6 @@
 # Overview
 Purpose of this project is to explore the pygame library and conquor the difficulties of game design.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
-
 [Software Demo Video](https://youtu.be/buAEybsxueI)
 
 # Development Environment
